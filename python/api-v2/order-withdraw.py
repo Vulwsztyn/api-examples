@@ -4,6 +4,7 @@ import requests
 import base64
 import uuid
 import urllib
+import sys
 
 from OpenSSL import crypto
 from datetime import datetime
@@ -16,7 +17,7 @@ ORDER_ID = 'ba7354e7-6bfe-4454-bea3-0958516c8932'
 assert API_KEY is not None
 assert ORDER_ID is not None
 
-API_BASE = 'https://api.walutomat.pl'
+API_BASE = sys.argv[1] if len(sys.argv) > 1 else 'https://api.walutomat.pl'
 URI = '/api/v2.0.0/market_fx/orders/close'
 
 private_key = crypto.load_privatekey(crypto.FILETYPE_PEM, open('./private.key').read())
