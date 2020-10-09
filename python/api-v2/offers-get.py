@@ -28,4 +28,4 @@ headers = {
 
 response = requests.get(f'{API_BASE}{URI}', headers=headers).text
 
-print(f'List of active offers: {response}')
+print(response)

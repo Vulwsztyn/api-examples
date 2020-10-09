@@ -28,4 +28,4 @@ headers = {
 
 response = requests.get(f'{API_BASE}{URI}', headers = headers).text
 
-print(f'Your current wallet balance is: {response}')
+print(response)

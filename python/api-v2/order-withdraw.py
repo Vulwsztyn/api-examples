@@ -42,4 +42,4 @@ headers = {
 
 response = requests.post(f'{API_BASE}{URI}', data = urlencoded, headers = headers)
 
-print(f'Withdrawn order: {response.text}')
+print(response.text)
